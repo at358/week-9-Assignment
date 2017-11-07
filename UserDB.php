@@ -13,17 +13,13 @@
 	    $q = $conn->prepare($sql);
 	    $q->execute();
 	    $users = $q->fetchAll();
-	    if($q->rowCount() = 0){
-	      INSERT INTO `accounts`(`id`, `email`, `fname`, `lname`, `phone`, `birthday`, `gender`, `password`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])
-      	      UPDATE `accounts` SET `id`=[value-1],`email`=[value-2],`fname`=[value-3],`lname`=[value-4],`phone`=[value-5],`birthday`=[value-6],`gender`=[value-7],`password`=[value-8] WHERE 1
-              DELETE FROM `accounts` WHERE [value-1] 
-    		}
-	    }
+	    if($q->rowCount() > 0){
+	      foreach ($results as $row) {
+        		echo "<tr><td>".$row["id"]."</td><td>".$row["email"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td><td>".$row["phone"]."</td><td>".$row["birthday"]."</td><td>".$row["gender"]."</td><td>".$row["password"]."</td></tr>";  
 	     else{
-	    	foreach ($results as $row) {
-        		echo "<tr><td>".$row["id"]."</td><td>".$row["email"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td><td>".$row["phone"]."</td><td>".$row["birthday"]."</td><td>".$row["gender"]."</td><td>".$row["password"]."</td></tr>";
+	    	break;	
 	    } 
-	  
+	}
        $q->closeCursor();
     
      }
