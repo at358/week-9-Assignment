@@ -21,7 +21,7 @@
 	    }
 	     else{
 	    	foreach ($results as $row) {
-        		echo "<tr><td>".$row["id"]."</td><td>".$row["email"]."</td></tr>";
+        		echo "<tr><td>".$row["id"]."</td><td>".$row["email"]."</td><td>".$row["fname"]."</td><td>".$row["lname"]."</td><td>".$row["phone"]."</td><td>".$row["birthday"]."</td><td>".$row["gender"]."</td><td>".$row["password"]."</td></tr>";
 	    } 
 	  
        $q->closeCursor();
