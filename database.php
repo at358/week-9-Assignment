@@ -1,8 +1,8 @@
 <?php
 class Database {
-    private static $dsn = 'mysql:host=sql2.njit.edu;dbname=bcn3_proj';
-    private static $username = 'bcn3_proj';
-    private static $password = 'w9hLvRFP';
+    private static $dsn = 'mysql:host=sql1.njit.edu;dbname=at358';
+    private static $username = 'at358';
+    private static $password = 'rhkGR7VNK';
     private static $db;
 
     private function __construct() {}
