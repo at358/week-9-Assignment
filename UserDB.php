@@ -9,7 +9,7 @@
  try {
 	    $conn = new PDO($dsn, $username, $password);
 	    echo "Connected successfully<br>";
-	    $sql = "SELECT * FROM accounts";
+	    $sql = "SELECT * FROM accounts WHERE 1";
 	    $q = $conn->prepare($sql);
 	    $q->execute();
 	    $users = $q->fetchAll();
